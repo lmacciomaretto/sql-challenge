@@ -31,7 +31,8 @@ CREATE TABLE dept_emp(
 	id SERIAL PRIMARY KEY,
 	emp_no INTEGER NOT NULL,
 	dept_no VARCHAR (255) NOT NULL,
-	FOREIGN KEY(emp_no) references salaries(emp_no)
+	FOREIGN KEY(emp_no) references salaries(emp_no),
+	FOREIGN KEY(dept_no) references departments(dept_no)
 ); 
 
 -- Import dept_emp.csv
